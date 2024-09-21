@@ -2,7 +2,7 @@
 
 A website for a build forms (to-do list) built with React JS, Tailwind CSS, TypeScript and more.
 
-![página inicial]()
+![página inicial](https://github.com/wandanamaddumage/build-form-ai/blob/main/public/buildForm_ai.png)
 
 ## Description
 
@@ -24,6 +24,10 @@ The main goal of the project was to apply knowledge of React JS, TypeScript, Tai
 - Shadcn UI
 - React Icons
 - Figma (prototipagem)
+
+## Project Demo
+
+https://www.loom.com/share/2f5093c0f4384f5095d70efe1bde01ab?sid=cc69766c-c964-42db-a222-b07882f59c33
 
 ## Como testar
 
