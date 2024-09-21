@@ -3,11 +3,11 @@ import TasksSection from "./components/TaskSection";
 
 const FormEditor = () => {
   return (
-    <div className="flex h-screen">
-      <div className="w-1/5">
+    <div className="flex flex-col h-screen lg:flex-row">
+      <div className="w-full lg:w-1/5">
         <Menu />
       </div>
-      <div className="w-1/5">
+      <div className="w-full lg:w-4/5">
         <TasksSection />
       </div>
     </div>
