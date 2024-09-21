@@ -2,19 +2,22 @@ import { Button } from "@/components/ui/button";
 import { useState } from "react";
 import { FaCloud } from "react-icons/fa";
 import { HiMiniStopCircle } from "react-icons/hi2";
-import { IoMdAdd, IoMdSettings } from "react-icons/io";
+import { IoMdSettings } from "react-icons/io";
 import { MdDelete, MdOutlineMenu } from "react-icons/md";
 import CreateWelcomeScreen from "./components/WelcomScreen";
 import CreateEndScreen from "./components/EndScreen";
 import { RiCloseFill } from "react-icons/ri";
+import { AddField } from "./components/AddField";
 
 const Content = () => {
-  const [isOpen, setIsOpen] = useState(false);
+  const [isOpenWelcomScreen, setIsOpenWelcomScreen] = useState(false);
+  const [isOpenEndScreen, setIsOpenEndScreen] = useState(false);
+
   return (
     <div className="mt-10">
       <div>
         <div>
-          <h1 className="flex items-center gap-2 font-semibold text-sm">
+          <h1 className="flex items-center gap-2 font-semibold text-sm border-none">
             <MdOutlineMenu /> Steps
           </h1>
           <div className="my-1 text-xs">
@@ -26,14 +29,14 @@ const Content = () => {
             <Button
               variant="ghost"
               className="my-5 w-60 bg-zinc-50 hover:bg-zinc-100 flex font-normal text-xs"
-              onClick={() => setIsOpen(true)}
+              onClick={() => setIsOpenWelcomScreen(true)}
             >
               <HiMiniStopCircle className="w-1/6 text-zinc-400" />
               <div className="w-5/6 justify-center">Welcome screen</div>
             </Button>
             <div
               className={`fixed inset-y-0 left-0 w-80 bg-white p-5 transform transition-transform duration-300 ease-in-out ${
-                isOpen ? "translate-x-0" : "-translate-x-full"
+                isOpenWelcomScreen ? "translate-x-0" : "-translate-x-full"
               }`}
             >
               <div>
@@ -41,7 +44,7 @@ const Content = () => {
                   variant="ghost"
                   size="icon"
                   className="absolute top-4 right-4 border"
-                  onClick={() => setIsOpen(false)}
+                  onClick={() => setIsOpenWelcomScreen(false)}
                 >
                   <RiCloseFill className="text-base font-bold" />
                 </Button>
@@ -55,13 +58,14 @@ const Content = () => {
                 <Button
                   variant="ghost"
                   className="w-full lg:w-1/2 bg-black hover:bg-zinc-900 flex font-medium text-xs text-white hover:text-white gap-2 h-auto"
+                  onClick={() => setIsOpenWelcomScreen(false)}
                 >
                   <div className="justify-center">Save</div>
                 </Button>
                 <Button
                   variant="ghost"
                   className="w-full lg:w-1/2 bg-white hover:bg-red-50 flex font-medium text-xs text-red-500 hover:text-red-500 gap-2 h-auto"
-                  onClick={() => setIsOpen(false)}
+                  onClick={() => setIsOpenWelcomScreen(false)}
                 >
                   <div className="justify-center">Discard</div>
                 </Button>
@@ -69,13 +73,7 @@ const Content = () => {
             </div>
           </div>
 
-          <Button
-            variant="outline"
-            className="my-5 hover:bg-zinc-100 flex font-medium text-xs gap-2 h-auto"
-          >
-            <IoMdAdd />
-            Add Field
-          </Button>
+          <AddField />
 
           <hr className="my-8 border-t-2 border-zinc-100" />
 
@@ -83,14 +81,14 @@ const Content = () => {
             <Button
               variant="ghost"
               className="w-60 bg-zinc-50 hover:bg-zinc-100 flex font-normal text-xs"
-              onClick={() => setIsOpen(true)}
+              onClick={() => setIsOpenEndScreen(true)}
             >
               <HiMiniStopCircle className="w-1/6 text-zinc-400" />
               <div className="w-5/6 justify-center">End screen</div>
             </Button>
             <div
               className={`fixed inset-y-0 left-0 w-80 bg-white p-5 transform transition-transform duration-300 ease-in-out ${
-                isOpen ? "translate-x-0" : "-translate-x-full"
+                isOpenEndScreen ? "translate-x-0" : "-translate-x-full"
               }`}
             >
               <div className="">
@@ -98,7 +96,7 @@ const Content = () => {
                   variant="ghost"
                   size="icon"
                   className="absolute top-4 right-4 border"
-                  onClick={() => setIsOpen(false)}
+                  onClick={() => setIsOpenEndScreen(false)}
                 >
                   <RiCloseFill className="text-base font-bold" />
                 </Button>
@@ -112,13 +110,14 @@ const Content = () => {
                 <Button
                   variant="ghost"
                   className="w-full lg:w-1/2 bg-black hover:bg-zinc-900 flex font-medium text-xs text-white hover:text-white gap-2 h-auto"
+                  onClick={() => setIsOpenEndScreen(false)}
                 >
                   <div className="justify-center">Save</div>
                 </Button>
                 <Button
                   variant="ghost"
                   className="w-full lg:w-1/2 bg-white hover:bg-red-50 flex font-medium text-xs text-red-500 hover:text-red-500 gap-2 h-auto"
-                  onClick={() => setIsOpen(false)}
+                  onClick={() => setIsOpenEndScreen(false)}
                 >
                   <div className="justify-center">Discard</div>
                 </Button>
@@ -127,7 +126,7 @@ const Content = () => {
           </div>
         </div>
       </div>
-      <div className="mt-64 flex gap-2 justify-center">
+      <div className="mt-60 flex gap-2 justify-center">
         <Button
           variant="ghost"
           className="w-full lg:w-1/2 bg-black hover:bg-zinc-900 flex font-medium text-xs text-white hover:text-white gap-2 h-auto"
