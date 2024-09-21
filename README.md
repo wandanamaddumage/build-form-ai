@@ -1,50 +1,43 @@
-# React + TypeScript + Vite
+# 📅 BUILD-FORM-AI
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A website for a build forms (to-do list) built with React JS, Tailwind CSS, TypeScript and more.
 
-Currently, two official plugins are available:
+![página inicial]()
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Description
 
-## Expanding the ESLint configuration
+- User-Friendly Interface: Navigate effortlessly through an intuitive layout that makes form creation quick and easy.
+- Default Screens: Start with pre-built Welcome and End screens, ensuring a smooth user experience from start to finish.
+- Customizable Fields: Add and customize various form fields such as text inputs, dropdowns, checkboxes, and radio buttons to meet your specific needs.
+- Real-Time Preview: See your form as you build it, allowing for immediate adjustments and enhancements.
+- Responsive Design: Create forms that look great on any device, whether it’s a desktop, tablet, or mobile phone.
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+## Objective
 
-- Configure the top-level `parserOptions` property like this:
+The main goal of the project was to apply knowledge of React JS, TypeScript, Tailwind and more
 
-```js
-export default tseslint.config({
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
+## Tools Used
+
+- React JS
+- TypeScript
+- Tailwind CSS
+- Shadcn UI
+- React Icons
+- Figma (prototipagem)
+
+## Como testar
+
+You can access the project here: https://build-form-ai-bby4.vercel.app/
+
+Or run it on your machine:
+
+```
+git clone https://github.com/wandanamaddumage/build-form-ai.git
+cd tasks-app
+npm install
+npm start
 ```
 
-- Replace `tseslint.configs.recommended` to `tseslint.configs.recommendedTypeChecked` or `tseslint.configs.strictTypeChecked`
-- Optionally add `...tseslint.configs.stylisticTypeChecked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and update the config:
+## Notes
 
-```js
-// eslint.config.js
-import react from 'eslint-plugin-react'
-
-export default tseslint.config({
-  // Set the react version
-  settings: { react: { version: '18.3' } },
-  plugins: {
-    // Add the react plugin
-    react,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended rules
-    ...react.configs.recommended.rules,
-    ...react.configs['jsx-runtime'].rules,
-  },
-})
-```
+- This project is ongoing, and some functionalities have not been implemented yet.
