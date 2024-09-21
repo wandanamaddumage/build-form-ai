@@ -1,11 +1,10 @@
 import React from "react";
+import TabList from "./components/Tabs";
 
 const Menu: React.FC = () => {
   return (
-    <header className="left-0 h-full flex flex-col">
-      <h1 className="font-bold text-black uppercase text-center mt-8 text-lg tracking-wide hidden xl:block">
-        To-do list
-      </h1>
+    <header className="left-0 h-screen flex flex-col">
+      <TabList />
     </header>
   );
 };
