@@ -13,7 +13,7 @@ export function BreadcrumbInCreateForm() {
     <Breadcrumb className="ml-6 mt-6 text-xs">
       <BreadcrumbList>
         <BreadcrumbItem>
-          <BreadcrumbLink className="flex items-center hover:text-sky-500 text-xs font-medium">
+          <BreadcrumbLink className="flex items-center hover:text-indigo-500 text-xs font-medium">
             <BsBoxFill className="mr-1" />
             Dashboard
           </BreadcrumbLink>
