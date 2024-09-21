@@ -3,7 +3,7 @@ import FormEditor from "./pages/FormEditor";
 
 const App: React.FC = () => {
   return (
-    <div className="font-inter">
+    <div className="font-inter min-min-h-screen">
       <FormEditor />
     </div>
   );
