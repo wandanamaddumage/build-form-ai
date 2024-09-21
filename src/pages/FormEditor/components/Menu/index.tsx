@@ -5,7 +5,7 @@ import { BreadcrumbInCreateForm } from "./components/BreadCrumb";
 
 const Menu: React.FC = () => {
   return (
-    <header className="left-0 h-screen flex flex-col">
+    <header className="left-0 min-h-screen flex flex-col">
       <BreadcrumbInCreateForm />
       <TabList />
     </header>
