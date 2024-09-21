@@ -16,7 +16,7 @@ export default function TabList() {
           <TabsTrigger
             key={tab.value}
             value={tab.value}
-            className="rounded-md px-3 py-1.5 text-sm font-normal transition-all data-[state=active]:bg-white data-[state=active]:text-foreground data-[state=active]:shadow-md"
+            className="rounded-md px-5 py-1.5 text-sm font-normal transition-all data-[state=active]:bg-white data-[state=active]:text-foreground data-[state=active]:shadow-md"
           >
             {tab.label}
           </TabsTrigger>
@@ -26,7 +26,7 @@ export default function TabList() {
         <TabsContent
           key={tab.value}
           value={tab.value}
-          className="mt-4 rounded-lg bg-white p-4 h-full"
+          className="mt-4 rounded-lg bg-white h-full"
         >
           {tab.content}
         </TabsContent>
